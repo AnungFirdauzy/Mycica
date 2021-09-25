@@ -20,12 +20,12 @@
         {{-- Font --}}
             {{-- Montserrat --}}
             <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow">
             <div class="container">
                 <a class="navbar-brand" href="#" style="text-decoration: none"
                     ><img
@@ -85,10 +85,10 @@
                         </li>
                     </ul>
                     <form class="container text-end">
-                        <button class="btn btn-outline-primary mx-2" type="button">
+                        <a href="/login"><button class="btn btn-outline-primary mx-2" type="button">
                             Masuk
-                        </button>
-                        <button class="btn btn-primary" type="button">
+                        </button></a>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Daftar
                         </button>
                     </form>
@@ -247,13 +247,39 @@
                     </div>
                 </div>
             </section>
-        {{-- close --}}
+        {{-- close footer --}}
+
+        <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="container text-center">
+                            <h1 style="font-size: 36px">Silahkan memilih role Anda agar dapat mendaftar ke sistem kami.</h1>
+                        </div>
+                        <div class="container mt-5 text-center">
+                            <a href="/regis-peternak"><button class="btn btn-outline-primary" style="width: 152px; margin-right: 30px">Peternak</button></a>
+                            <a href="/regis-invest"><button class="btn btn-outline-primary" style="width: 152px">Investor</button></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        
 
 
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"
-        ></script>
+        >
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+            myInput.focus()
+        })
+    
+        </script>
     </body>
 </html>

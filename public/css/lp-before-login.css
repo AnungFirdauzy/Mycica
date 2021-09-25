@@ -9,3 +9,7 @@ form button {
 ul li.nav-item {
     padding-left: 58px;
 }
+
+input {
+    border: 1px solid black;
+}

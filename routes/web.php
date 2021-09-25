@@ -15,4 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
+});
+
+Route::get('/login', function () {
+    return view('login');
+}); 
+
+Route::get('/regis-invest', function () {
+    return view('registerInvestor');
+}); 
+
+Route::get('/regis-peternak', function () {
+    return view('registerPeternak');
 }); 
