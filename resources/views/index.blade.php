@@ -104,9 +104,10 @@
                 <p class="display-4 my-5" style="font-size: 52pt">
                     The Next Level of Investment is Here!
                 </p>
-                <a class="btn btn-primary btn-lg" href="#" role="button"
+                <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Bergabung Sekarang</button>
+                {{-- <a class="btn btn-primary btn-lg" href="#" role="button"
                     >Bergabung Sekarang</a
-                >
+                > --}}
             </div>
         </section>
         {{-- Close Hero --}}
