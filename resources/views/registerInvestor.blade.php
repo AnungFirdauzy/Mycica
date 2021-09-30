@@ -75,6 +75,14 @@
                     <div class="mb-3">
                         <input type="text" class="form-control" placeholder="Pendapatan bersih">
                     </div>
+
+                    <div class="mb-3">
+                        <input type="password" class="form-control" placeholder="Password">
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="password" class="form-control" placeholder="Konfirmasi Password">
+                    </div>
                     
                     <button type="submit" class="btn btn-primary">Daftar</button>
                 </form>
