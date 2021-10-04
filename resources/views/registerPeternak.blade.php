@@ -15,38 +15,77 @@
             </div>
             <div class="container p-5" style="width: 50%; border: 1px solid black">
                 <h2><strong>Register</strong></h2>
-                <form>
+                <form action="/regis-peternak" method="POST">
+                    @csrf
                     <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Nama perusahaan/peternakan">
+                        <input type="text" name="company" class="form-control @error('company') is-invalid @enderror" placeholder="Nama perusahaan/peternakan" value="{{ old('company') }}">
+                    @error('company')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                     </div>
 
                     <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Nama Pemilik">
+                        <input type="text" name="ownerName" class="form-control @error('ownerName') is-invalid @enderror" placeholder="Nama Pemilik" value="{{ old('ownerName') }}">
+                    @error('ownerName')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                     </div>
 
                     <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Nomor Induk Kependudukan (NIK)">
+                        <input type="text" name="nik" class="form-control @error('nik') is-invalid @enderror" placeholder="Nomor Induk Kependudukan (NIK)" value="{{ old('nik') }}">
+                    @error('nik')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                     </div>
 
                     <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="NPWP">
+                        <input type="text" name="npwp" class="form-control @error('npwp') is-invalid @enderror" placeholder="NPWP" value="{{ old('npwp') }}">
+                    @error('npwp')
+                        {{ $message }}
+                    @enderror
                     </div>
 
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">+62</span>
-                        <input type="text" class="form-control" placeholder="Nomor Telepom" aria-label="Nomor Telepom" aria-describedby="basic-addon1">
+                        <input type="text" name="phone" class="form-control @error('phone') is-invalid @enderror" placeholder="Nomor Telepon" aria-label="Nomor Telepon" aria-describedby="basic-addon1" value="{{ old('phone') }}">
+                    @error('phone')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                     </div>
 
                     <div class="mb-3">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="email" name="email" class="form-control @error ('email') is-invalid @enderror" placeholder="Email" value="{{ old('email') }}">
+                    @error('email')
+                        <div class="invalid-feedback">
+                                {{ $message }}
+                        </div>
+                    @enderror
                     </div>
 
                     <div class="mb-3">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" name="pass" class="form-control @error('pass') is-invalid @enderror" placeholder="Password" value="{{ old('pass') }}">
+                    @error('pass')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                     </div>  
 
                     <div class="mb-3">
-                        <input type="password" class="form-control" placeholder="Konfirmasi Password">
+                        <input type="password" name="repass" class="form-control @error('repass') is-invalid @enderror" placeholder="Konfirmasi Password" value="{{ old('repass') }}">
+                    @error('repass')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                     </div>  
 
 

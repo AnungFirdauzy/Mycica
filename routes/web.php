@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisinvestController;
+use App\Http\Controllers\RegispeterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,18 +16,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//  Landing Page
 Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/login', function () {
-    return view('login');
-}); 
+// Login Page
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'loginAcount']);
 
-Route::get('/regis-invest', function () {
-    return view('registerInvestor');
-}); 
+// Investor Registration Page
+Route::get('/regis-invest', [RegisinvestController::class, 'index']); 
+Route::post('/regis-invest', [RegisinvestController::class, 'addAcount']); 
 
-Route::get('/regis-peternak', function () {
-    return view('registerPeternak');
-}); 
+// Peternak Registration Page
+Route::get('/regis-peternak', [RegispeterController::class, 'index']);
+Route::post('/regis-peternak', [RegispeterController::class, 'addAcount']);

@@ -2,6 +2,13 @@
 
 @section('container')
     <div class="container-fluid vh-100">
+        @if(session()->has('success'))
+                        <div class="alert alert-success alert-dismissible fade show mt-4 text-center" role="alert">
+                            {{ session('success') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+        @endif
+        <br>
         <div class="container position-absolute top-50 start-50 translate-middle">
             <div class="container" id="Upper">
                 <div class="container d-flex justify-content-center" id="Logo">
@@ -15,15 +22,22 @@
             </div>
             <div class="container p-5" style="width: 50%; border: 1px solid black">
                 <h2><strong>Login</strong></h2>
-                <form>
+                <form action="/login" method="POST">
+                    @csrf
                     <div class="mb-3">
-                        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Username">
+                        <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" aria-describedby="emailHelp" placeholder="Username" value="{{ old('email') }}">
+                        @error('email')
+                        {{ $message }}
+                        @enderror
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div class="mb-3">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" name="password" class="form-control @error('pass') is-invalid @enderror" placeholder="Password">
+                        @error('passs')
+                            {{ $message }}
+                        @enderror
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
                 </form>
                 <br>
                 <br>

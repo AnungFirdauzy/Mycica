@@ -58,14 +58,19 @@
                     >
                 </li>
             </ul>
-            <form class="container text-end">
-                <a href="/login"><button class="btn btn-outline-primary mx-2" type="button">
-                    Masuk
-                </button></a>
-                <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Daftar
-                </button>
-            </form>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="/login"><button class="btn btn-outline-primary mx-2" type="button">
+                        <i class="bi bi-box-arrow-in-right"></i> Masuk
+                    </button></a>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #4682b4">
+                        <i class="bi bi-pencil-square"></i> Daftar
+                    </button>
+                </li>
+            </ul>
+            {{-- <form class="container text-end">
+                
+            </form> --}}
         </div>
     </div>
 </nav>
