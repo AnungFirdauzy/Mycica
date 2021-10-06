@@ -2,6 +2,15 @@
 
 @section('container')
     <div class="container-fluid vh-100">
+
+        @if(session()->has('gagal'))
+            <div class="alert alert-danger alert-dismissible fade show mt-3 text-center" role="alert">
+                {{ session('gagal') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+
+
         <div class="container mt-3">
             <div class="container" id="Upper">
                 <div class="container d-flex justify-content-center" id="Logo">

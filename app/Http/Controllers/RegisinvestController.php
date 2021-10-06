@@ -29,12 +29,17 @@ class RegisinvestController extends Controller
             'repass'    => 'required|min:8|max:40',
         ]);
 
-        $raw_data['pass'] = Hash::make($raw_data['pass']);
+        if($raw_data['pass']===$raw_data['repass']){
+            $raw_data['pass'] = Hash::make($raw_data['pass']);
 
-        AkunInvestors::create($raw_data);
-        
-        $request->session()->flash('success', 'Registrasi BERHASIL, Silahkan login untuk melanjutkan !');
+            AkunInvestors::create($raw_data);
+            
+            $request->session()->flash('gagal', 'Password dan konfirmasi password harus sama.');
 
-        return redirect('/login');
+            return redirect('/login');
+        }
+        $request->session()->flash('gagal', 'Password dan konfirmasi password harus sama.');
+
+        return redirect('/regis-invest');
     }
 }

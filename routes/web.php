@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegisinvestController;
+use App\Http\Controllers\DashController;
 use App\Http\Controllers\RegispeterController;
+use App\Http\Controllers\RegisinvestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,7 @@ Route::get('/', function () {
 
 // Login Page
 Route::get('/login', [LoginController::class, 'index']);
-Route::post('/login', [LoginController::class, 'loginAcount']);
+
 
 // Investor Registration Page
 Route::get('/regis-invest', [RegisinvestController::class, 'index']); 
@@ -32,3 +33,6 @@ Route::post('/regis-invest', [RegisinvestController::class, 'addAcount']);
 // Peternak Registration Page
 Route::get('/regis-peternak', [RegispeterController::class, 'index']);
 Route::post('/regis-peternak', [RegispeterController::class, 'addAcount']);
+
+// Dashboar Peternak
+Route::post('/dashboard',[DashController::class, 'authenticate']);

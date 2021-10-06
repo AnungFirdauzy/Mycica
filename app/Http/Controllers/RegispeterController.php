@@ -25,12 +25,18 @@ class RegispeterController extends Controller
             'repass'        => 'required|max:255',
         ]);
 
-        $raw_data['pass'] = Hash::make($raw_data['pass']);
+        if($raw_data['pass']===$raw_data['repass']){
+            $raw_data['pass'] = Hash::make($raw_data['pass']);
 
-        AkunPeternak::create($raw_data);
+            AkunPeternak::create($raw_data);
 
-        $request->session()->flash('success', 'Registrasi BERHASIL, Silahkan login untuk melanjutkan !');
+            $request->session()->flash('success', 'Registrasi BERHASIL, Silahkan login untuk melanjutkan !');
 
-        return redirect('/login');
+            return redirect('/login');
+        }
+
+        $request->session()->flash('gagal', 'Password dan konfirmasi password harus sama.');
+
+        return redirect('/regis-peternak');
     }
 }
