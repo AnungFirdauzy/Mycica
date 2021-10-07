@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DataViewController;
 use App\Http\Controllers\PFinvestorController;
 use App\Http\Controllers\RegispeterController;
 use App\Http\Controllers\RegisinvestController;
@@ -53,5 +54,12 @@ Route::post('/profil/edit/2/{id}',[PFinvestorController::class,'Pedit']);
 // Dashboard
 Route::post('/dashboard',[DashController::class, 'authenticate']);
 
+// Tabel Data Investor
+Route::get('/data/investor/{id}',[DataViewController::class,'dataInvestor']);
+Route::get('/detail/investor/{id}',[DataViewController::class,'dataInvestordetail']);
+
+// Tabel Data peternak
+Route::get('/data/peternak/{id}',[DataViewController::class,'datapeternak']);
+Route::get('/detail/peternak/{id}',[DataViewController::class,'datapeternakdetail']);
 
 

@@ -27,13 +27,13 @@
                     </div>
                     <div class="row gx-5">
                         <div class="col">
-                            <a href="" class="" style="text-decoration: none; color:black"><div class="container border p-2 text-center">
+                            <a href="/data/investor/{{ $id }}" class="" style="text-decoration: none; color:black"><div class="container border p-2 text-center">
                                 <img src="/Image/Icon Investor.png" alt="Icon Invest" style="width: 70px">
                                 <p><strong>Investor</strong></p>
                             </div></a>
                         </div>
                         <div class="col">
-                            <a href="" class="" style="text-decoration: none; color:black"><div class="container border p-2 text-center">
+                            <a href="/data/peternak/{{ $id }}" class="" style="text-decoration: none; color:black"><div class="container border p-2 text-center">
                                 <img src="/Image/Icon Breeder.png" alt="Icon Invest" style="width: 70px">
                                 <p><strong>Peternak</strong></p>
                             </div></a>
