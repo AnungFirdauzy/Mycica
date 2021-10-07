@@ -39,9 +39,11 @@ class DashController extends Controller
                 if (Hash::check($credentials['pass'], $user->pass)) {
                     $id=$user->id;
                     $name=$user->nama;
+                    $role= 1;
                     return view('dashinvest',[
                         "id" => $id,
-                        "name" => $name
+                        "name" => $name,
+                        "role" => $role,
                     ]);
                 }
             }
@@ -51,9 +53,11 @@ class DashController extends Controller
                 if (Hash::check($credentials['pass'], $user->pass)) {
                     $id=$user->id;
                     $name=$user->ownername;
+                    $role = 2;
                     return view('dashpeter',[
                         "id" => $id,
-                        "name" => $name
+                        "name" => $name,
+                        "role" => $role,
                     ]);
                 }
             }

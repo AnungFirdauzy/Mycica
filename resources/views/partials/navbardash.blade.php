@@ -43,7 +43,7 @@
             </ul>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <p>Welcome, <a href="">{{ $name }}</a></p>
+                    <p>Welcome, <a href="/profil/{{ $id }}/{{ $role }}">{{ $name }}</a></p>
                 </li>
             </ul>
         </div>
