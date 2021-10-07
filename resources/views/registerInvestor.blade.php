@@ -18,7 +18,7 @@
                     <p style="font-size: 50px">MyCica</p>
                 </div>
                 <br>
-                <h1 class="text-center">Silahkan daftarkan diri Anda agar dapat berinvestasi dengan kami.</h1>
+                <h1 class="text-center">Register Admin</h1>
                 <br>
                 <br>
             </div>

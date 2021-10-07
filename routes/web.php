@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegispeterController;
 use App\Http\Controllers\RegisinvestController;
 
@@ -34,5 +35,9 @@ Route::post('/regis-invest', [RegisinvestController::class, 'addAcount']);
 Route::get('/regis-peternak', [RegispeterController::class, 'index']);
 Route::post('/regis-peternak', [RegispeterController::class, 'addAcount']);
 
-// Dashboar Peternak
+// Dashboard
 Route::post('/dashboard',[DashController::class, 'authenticate']);
+
+// register Admin
+Route::get('/admin',[AdminController::class,'index']);
+Route::post('/admin',[AdminController::class,'addAdmin']);

@@ -29,6 +29,11 @@ class DashController extends Controller
                             ->where('email',$credentials['email'])
                             ->get();
 
+        $special_users = DB::table('akun_admins')
+                            ->select('email','pass','id','nama')
+                            ->where('email',$credentials['email'])
+                            ->get();
+
         foreach ($users_investor as $user) {
             if($user->email == $credentials['email']) {
                 if (Hash::check($credentials['pass'], $user->pass)) {
@@ -47,6 +52,19 @@ class DashController extends Controller
                     $id=$user->id;
                     $name=$user->ownername;
                     return view('dashpeter',[
+                        "id" => $id,
+                        "name" => $name
+                    ]);
+                }
+            }
+        }
+
+        foreach ($special_users as $user) {
+            if($user->email == $credentials['email']) {
+                if (Hash::check($credentials['pass'], $user->pass)) {
+                    $id=$user->id;
+                    $name=$user->nama;
+                    return view('dashadmin',[
                         "id" => $id,
                         "name" => $name
                     ]);
