@@ -3,7 +3,7 @@
     <div class="container">
         <a class="navbar-brand" href="#" style="text-decoration: none"
             ><img
-                src="Image/Burung Only.png"
+                src="{{ URL::asset("Image/Burung Only.png") }}"
                 alt="Nav-Logo"
                 style="width: 20pt"
             />MyCica</a
@@ -25,7 +25,7 @@
                     <a
                         class="nav-link active"
                         aria-current="page"
-                        href="#"
+                        href=""
                         style="color: #18a0fb"
                         >Investasi</a
                     >
@@ -34,43 +34,18 @@
                     <a
                         class="nav-link active"
                         aria-current="page"
-                        href="#"
+                        href="/katalog-invest/{{ $id }}"
                         style="color: #18a0fb"
                         >Katalog</a
                     >
                 </li>
-                <li class="nav-item">
-                    <a
-                        class="nav-link active"
-                        aria-current="page"
-                        href="#"
-                        style="color: #18a0fb"
-                        >Investor</a
-                    >
-                </li>
-                <li class="nav-item">
-                    <a
-                        class="nav-link active"
-                        aria-current="page"
-                        href="#"
-                        style="color: #18a0fb"
-                        >Peternak</a
-                    >
-                </li>
+
             </ul>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a href="/login"><button class="btn btn-outline-primary mx-2" type="button">
-                        <i class="bi bi-box-arrow-in-right"></i> Masuk
-                    </button></a>
-                    <a href="/regis-invest"><button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #4682b4">
-                        <i class="bi bi-pencil-square"></i> Daftar
-                    </button></a>
+                    <p class="">Welcome, <a href="/profil/{{ $id }}/investor">{{ $name }}</a></p>
                 </li>
             </ul>
-            {{-- <form class="container text-end">
-                
-            </form> --}}
         </div>
     </div>
 </nav>

@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AkunPeternak extends Model
+class DataBurung extends Model
 {
     use HasFactory;
-
+    
     protected $guarded = [
-        'id_peternak'
+        'id_burung'
     ];
 
-    public function databurung()
+    public function akunpeternaks()
     {
-        return $this->hasMany(DataBurung::class,'id_peternak');
+        return $this->belongsTo(AkunPeternak::class,'id_peternak');
     }
 }

@@ -19,7 +19,7 @@
             </div>
             <div class="container p-5" style="width: 50%; border: 1px solid black">
                 <h2><strong>Profil Baru</strong></h2>
-                <form action="/profil/edit/1/{{ $id }}" method="POST">
+                <form action="/profil/edit/investor/{{ $id }}" method="POST">
                     @csrf
 
                     <div class="mb-3">

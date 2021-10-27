@@ -25,7 +25,7 @@ class DashController extends Controller
                             ->get();
                             
         $users_peternak = DB::table('akun_peternaks')
-                            ->select('email','pass','id','ownername')
+                            ->select('id','email','pass','ownername')
                             ->where('email',$credentials['email'])
                             ->get();
 

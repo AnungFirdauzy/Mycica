@@ -9,11 +9,11 @@
         <div class="col">
             <section class="jumbotron text-center vh-100 mt-4" style="background-color: #B0c4de">
                 <div class="container position-absolute top-50 start-50 translate-middle">
-                    <img src="Image/Burung Only.png" alt="" style="width: 200px" />
+                    <img src="{{ URL::asset("Image/Burung Only.png") }}" alt="" style="width: 200px" />
                     <p class="display-4 my-5" style="font-size: 52pt">
                         The Next Level of Investment is Here!
                     </p>
-                    <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #4682b4" >Bergabung Sekarang</button>
+                    <a href="/regis-invest"><button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #4682b4" >Bergabung Sekarang</button></a>
                 </div>
             </section>
             {{-- Close Hero --}}
@@ -132,7 +132,7 @@
         
         
             
-            <!-- Modal -->
+            {{-- <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">
@@ -147,7 +147,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             @include('partials.footer')
             

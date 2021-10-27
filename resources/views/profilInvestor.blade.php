@@ -14,7 +14,7 @@
                     <div class="container border p-3">
                         <img src="/Image/user.png" alt="" style="width: 100px; margin:20px">
                         <div class="container p-1">
-                            <a href="/profil/edit/1/{{ $id }}"><button class="btn btn-outline-primary" style="width: 130px">Edit</button></a>
+                            <a href="/profil/edit/investor/{{ $id }}"><button class="btn btn-outline-primary" style="width: 130px">Edit</button></a>
                             <a href=""><button class="btn btn-outline-primary m-1" style="width: 130px">Lengkapi Data</button></a>
                         </div>
                         <a href="/login"><button class="btn btn-outline-danger" style="width: 130px">Keluar</button></a>

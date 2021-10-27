@@ -14,7 +14,7 @@ class CreateAkunAdminsTable extends Migration
     public function up()
     {
         Schema::create('akun_admins', function (Blueprint $table) {
-            $table->id();
+            $table->id('id');
             $table->string('nama');
             $table->string('email')->unique();
             $table->string('pass');

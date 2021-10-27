@@ -5,6 +5,8 @@ use App\Http\Controllers\DashController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DataViewController;
+use App\Http\Controllers\DataBurungController;
+use App\Http\Controllers\KatalogInvestor;
 use App\Http\Controllers\PFinvestorController;
 use App\Http\Controllers\RegispeterController;
 use App\Http\Controllers\RegisinvestController;
@@ -41,14 +43,14 @@ Route::get('/admin',[AdminController::class,'index']);
 Route::post('/admin',[AdminController::class,'addAdmin']);
 
 // Profil Investor
-Route::get('/profil/{id}/1',[PFinvestorController::class,'index']);
-Route::get('/profil/edit/1/{id}',[PFinvestorController::class,'Vedit']);
-Route::post('/profil/edit/1/{id}',[PFinvestorController::class,'edit']);
+Route::get('/profil/{id}/investor',[PFinvestorController::class,'index']);
+Route::get('/profil/edit/investor/{id}',[PFinvestorController::class,'Vedit']);
+Route::post('/profil/edit/investor/{id}',[PFinvestorController::class,'edit']);
 
 // Profil Peternak
-Route::get('/profil/{id}/2',[PFinvestorController::class,'Tedit']);
-Route::get('/profil/edit/2/{id}',[PFinvestorController::class,'VTedit']);
-Route::post('/profil/edit/2/{id}',[PFinvestorController::class,'Pedit']);
+Route::get('/profil/{id}/peternak',[PFinvestorController::class,'Tedit']);
+Route::get('/profil/edit/peternak/{id}',[PFinvestorController::class,'VTedit']);
+Route::post('/profil/edit/peternak/{id}',[PFinvestorController::class,'Pedit']);
 
 
 // Dashboard
@@ -62,4 +64,13 @@ Route::get('/detail/investor/{id}',[DataViewController::class,'dataInvestordetai
 Route::get('/data/peternak/{id}',[DataViewController::class,'datapeternak']);
 Route::get('/detail/peternak/{id}',[DataViewController::class,'datapeternakdetail']);
 
+// Katalog
+Route::get('/katalog/{id}',[DataBurungController::class,'index']);
+Route::get('/add-burung/{id}',[DataBurungController::class,'addDataV']);
+Route::post('/add-burung/{id}',[DataBurungController::class,'addDataC']);
+Route::get('/edit-burung/{id}',[DataBurungController::class,'editDataV']);
+Route::post('/edit-burung/{id}',[DataBurungController::class,'editDataC']);
+
+// Katalog Investor
+Route::get('/katalog-invest/{id}',[KatalogInvestor::class,'index']);
 

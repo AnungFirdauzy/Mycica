@@ -62,13 +62,13 @@
                 <br>
                 <div class="container d-flex justify-content-center">
                     <p style="margin-top: 10px">Belum memiliki akun?  </p>
-                    <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 140px; height: 40px; margin-left:10px">Daftar</button>
+                    <a href="/regis-invest"><button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 140px; height: 40px; margin-left:10px">Daftar</button></a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal -->
+    {{-- <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -83,7 +83,7 @@
             </div>
         </div>
         </div>
-    </div>
+    </div> --}}
 @endsection
 
 

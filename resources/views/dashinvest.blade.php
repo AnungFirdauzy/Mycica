@@ -2,7 +2,7 @@
 
 @section('container')
 
-    @include('partials.navbardash')
+    @include('partials.navbarinvestor')
     <div class="container-fluid vh-100 ">
         <section class="container position-absolute top-50 start-50 translate-middle">
             <div class="container border" style="padding: 100px 0px">

@@ -11,18 +11,18 @@
             </div>
             <div class="row">
                 <div class="col text-center">
-                    <div class="container border p-3">
+                    <div class="container border p-3 shadow">
                         <img src="/Image/user.png" alt="" style="width: 100px; margin:20px">
                         <div class="container p-1">
-                            <a href="/profil/edit/2/{{ $id }}"><button class="btn btn-outline-primary" style="width: 130px">Edit</button></a>
-                            <a href=""><button class="btn btn-outline-primary m-1" style="width: 130px">Lengkapi Data</button></a>
+                            <a href="/profil/edit/{{ $id }}/peternak"><button class="btn btn-outline-primary" style="width: 130px">Edit</button></a>
+                            <a href=""><button class="btn btn-primary m-1" style="width: 130px">Lengkapi Data</button></a>
                         </div>
-                        <a href="/login"><button class="btn btn-outline-danger" style="width: 130px">Keluar</button></a>
+                        <a href="/login"><button class="btn btn-danger" style="width: 130px">Keluar</button></a>
                     </div>
                 </div>
                 <div class="col">
                     <div class="container">
-                        <div class="container border p-5">
+                        <div class="container border p-5 shadow">
                             <h5><strong>Detail Profil</strong></h5>
                             <form class="container-flex" action="">
 

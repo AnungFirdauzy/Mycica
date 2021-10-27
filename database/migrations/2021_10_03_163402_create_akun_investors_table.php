@@ -14,7 +14,7 @@ class CreateAkunInvestorsTable extends Migration
     public function up()
     {
         Schema::create('akun_investors', function (Blueprint $table) {
-            $table->id();
+            $table->id('id');
             $table->string('nama');
             $table->string('nik')->unique();
             $table->string('age');
